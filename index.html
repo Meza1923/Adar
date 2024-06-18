@@ -1,26 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Random Survey Redirect</title>
-  <script type="text/javascript">
-    function redirectToRandomForm() {
-      // קישורים לשלושת השאלונים
-      var forms = [
-        'https://docs.google.com/forms/d/e/1FAIpQLSf7enr8tE0s_hDexIdbkkCnXPvyh1_UeyYv8J_6uJBYwibZZA/viewform?usp=sf_link',  // שאלון עם רקע לבן
-        'https://docs.google.com/forms/d/1ES3JRefkPZeLsnTrg3_lkNjM0luXD9F5JdrnPNWFOns/edit',   // שאלון עם רקע כחול
-        'https://docs.google.com/forms/d/e/1FAIpQLSfdakeyD7hz4a064kvKNxOP-2TnURYdZI-2iiD2WGK0VhSm5A/viewform?usp=sf_link'     // שאלון עם רקע אדום
-      ];
-
-      // בחירת שאלון באופן רנדומלי
-      var randomIndex = Math.floor(Math.random() * forms.length);
-      var selectedForm = forms[randomIndex];
-
-      // הפניה לשאלון שנבחר
-      window.location.href = selectedForm;
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Form Selector</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body onload="redirectToRandomForm()">
-  <p>Redirecting to your survey...</p>
+<body>
+    <h1>Just push on the button</h1>
+    <button onclick="pickRandomForm()">Click Me!</button>
+
+    <script>
+        function pickRandomForm() {
+            const forms = [
+                'form1.html',
+                'form2.html',
+                'form3.html'
+            ];
+            const randomForm = forms[Math.floor(Math.random() * forms.length)];
+            window.location.href = randomForm;
+        }
+    </script>
 </body>
 </html>
