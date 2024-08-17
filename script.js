@@ -28,10 +28,10 @@ window.onload = function () {
     ctx.fillStyle = "#ccc";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-    ctx.font = "50px Arial";
+    ctx.font = "100px Arial";
     ctx.fillStyle = "black";
     ctx.textAlign = "center";
-    ctx.fillText("?", canvas.width / 2, canvas.height / 2 + 20);
+    ctx.fillText("?", canvas.width / 2, canvas.height / 2 + 35);
 
     canvas.addEventListener('mousedown', startDrawing);
     canvas.addEventListener('mouseup', stopDrawing);
