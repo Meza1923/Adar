@@ -3,40 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Form Selector</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Scratch Card</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Just push on the button</h1>
-    <button onclick="pickRandomForm()">Click and Follow Me!</button>
-
-    <script>
-        function pickRandomForm() {
-            const forms = [
-                'https://docs.google.com/forms/d/e/1FAIpQLSdXEAgLqUt7O7UmrM9u9nvxc58JyS5-STqieATj_oRy2ns1Og/viewform?usp=sf_link',
-                'https://docs.google.com/forms/d/e/1FAIpQLSd7ZrIX1CJiYoQ0jKb7r7dhNomT6MjS1ItpcHkYgGZ_3c-nSg/viewform?usp=sf_link'
-            ];
-            const randomForm = forms[Math.floor(Math.random() * forms.length)];
-            window.location.href = randomForm;
-        }
-    </script>
+    <div class="scratch-container" id="scratch-container">
+        <canvas id="scratchCanvas"></canvas>
+        <img id="childImage" src="" alt="Child Face">
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
