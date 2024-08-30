@@ -3,14 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scratch Card</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Simple Photo Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #8B0000; /* Dark Red Background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        img {
+            width: 80vw;
+            max-width: 1200px;
+            height: auto;
+            border: 5px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-    <div class="scratch-container" id="scratch-container">
-        <canvas id="scratchCanvas"></canvas>
-        <img id="childImage" src="" alt="Child Face">
+    <div class="container">
+        <img src="itay.jpg" alt="Your Big Photo">
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
