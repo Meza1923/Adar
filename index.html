@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Photo Website</title>
+    <title>Responsive Photo Website</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #8B0000; /* Dark Red Background */
+            background-color: #8B0010; /* Dark Red Background */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
 
         .container {
-            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
         img {
-            width: 80vw;
-            max-width: 1200px;
-            height: auto;
-            border: 5px solid white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-width: none;
+            max-height: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="itay.jpg" alt="Your Big Photo">
+        <img src="your-image.jpg" alt="Your Big Photo">
     </div>
 </body>
 </html>
